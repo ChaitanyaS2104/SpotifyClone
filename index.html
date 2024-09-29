@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="left">
+        <div class="top">
+            <img class="logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Black_Spotify_logo_with_text.svg/150px-Black_Spotify_logo_with_text.svg.png">
+            <img src="icons/cross.svg" alt="close" class="cross">
+            <ul>
+                <li><img src="icons/home.svg">Home</li>
+                <li><img src="icons/search.svg">Search</li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <div class="library">
+                <img src="icons/library.svg">
+                <h3>Your Library</h3>
+            </div>
+            <div class="songList">
+                <ul>
+                    <!-- Songs will appear here -->
+                </ul>
+            </div>
+        </div>
+        <div class="about">
+            <div class="footer">
+                <a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a>
+                <a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Safety &amp; Privacy Center</span></a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                <a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a>
+                <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener"><span>Cookies</span></a>
+            </div>
+
+            <button class="language"><img src="icons/globe.svg">English</button>
+
+        </div>
+
+    </div>
+    <div class="right">
+        <nav>
+
+            <div class="pageFlow">
+                <img class="menu" src="icons/menu.svg" alt="menu">
+                <img src="icons/backPage.svg" class="nextPage">
+                <img src="icons/nextPage.svg" class="backPage">
+            </div>
+            <div class="buttons">
+                <button class="signUp">Sign Up</button>
+                <button class="logIn">Login</button>
+            </div>
+        </nav>
+        <div class="playlist">
+            <h2>Spotify Playlists</h2>
+
+            <div class="cardContainer">
+                <!-- Card will appear here -->
+            </div>
+        </div>
+        <div class="playbar">
+            <div class="topPlaybar">
+                <div class="playbarSongInfo"></div>
+
+                <div class="playButtons">
+                    <img id="previous" src="icons/previous.svg" alt="previous">
+                    <img id="play" src="icons/play.svg" alt="play">
+                    <img id="next" src="icons/next.svg" alt="next">
+                </div>
+
+                <div class="songTime"></div>
+            </div>
+
+            <div class="seekBar">
+                <div class="seekBarProgress"></div>
+                <div class="circle"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- <script src="script.js"></script> -->
+    <script src="try.js"></script>
+</body>
+
+</html>
