@@ -120,7 +120,7 @@ async function main() {
     // PLaying the clicked song
     async function playSong(e, pause = false) {
         let songSrc = e.querySelector(".songInfo").innerHTML.trim() + '.mp3'
-        currentSong.src = "/songs/" + currentFolder + '/' + songSrc;
+        currentSong.src = "songs/" + currentFolder + '/' + songSrc;
         if (!pause) {
             currentSong.play();
             document.getElementById("play").setAttribute("src", "icons/pause.svg");
