@@ -15,7 +15,7 @@ async function main() {
 
     //Display albums on the page
     async function displayAlbums() {
-        let songsFolder = await fetch("http://127.0.0.1:5500/songs/");
+        let songsFolder = await fetch("songs/");
         let FolderData = await songsFolder.text();
         let div = document.createElement("div");
         div.innerHTML = FolderData;
@@ -25,7 +25,7 @@ async function main() {
             if (folderNames[i].getAttribute("href").includes("/songs/")) {
                 let folder = (folderNames[i].getAttribute("href"));
                 //Get metadata of folder
-                let songsFolder = await fetch(`http://127.0.0.1:5500${folder}/file.json`);
+                let songsFolder = await fetch(`${folder}/file.json`);
                 let FolderData = await songsFolder.json();
                 console.log(FolderData);
                 
@@ -42,7 +42,7 @@ async function main() {
 
     async function loadFirstFolder() {
         //Load the first Folder
-        await getSongNames("http://127.0.0.1:5500/songs/" + Array.from(document.querySelectorAll(".card"))[0].dataset.folder.replaceAll(" ", "%20"));
+        await getSongNames("songs/" + Array.from(document.querySelectorAll(".card"))[0].dataset.folder.replaceAll(" ", "%20"));
 
         currentFolder = Array.from(document.querySelectorAll(".card"))[0].dataset.folder.replaceAll(" ", "%20")
 
@@ -68,7 +68,7 @@ async function main() {
         e.addEventListener("click", async item => {
             currentFolder = item.currentTarget.dataset.folder.replaceAll(" ", "%20");
             document.querySelector('.songList').getElementsByTagName('ul')[0].innerHTML = "";
-            songs = await getSongNames("http://127.0.0.1:5500/songs/" + currentFolder);
+            songs = await getSongNames("songs/" + currentFolder);
 
             //load the first song
             playSong(document.querySelector(".songList").getElementsByTagName("li")[0], pause = true);
