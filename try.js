@@ -20,14 +20,12 @@ async function main() {
         let div = document.createElement("div");
         div.innerHTML = FolderData;
         let folderNames = div.getElementsByTagName('a');
-        console.log(folderNames);
         for (let i = 0; i < folderNames.length; i++) {
             if (folderNames[i].getAttribute("href").includes("/songs/")) {
                 let folder = (folderNames[i].getAttribute("href"));
                 //Get metadata of folder
                 let songsFolder = await fetch(`${folder}/file.json`);
                 let FolderData = await songsFolder.json();
-                console.log(FolderData);
                 
                 cardContainer.innerHTML = cardContainer.innerHTML + `<div class="card" data-folder="${FolderData.title}">
                                 <img alt="${FolderData.title}" src="${FolderData.cover}">
