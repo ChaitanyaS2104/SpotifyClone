@@ -16,7 +16,7 @@ async function main() {
     //Display albums on the page
     async function displayAlbums() {
         let songsFolder = await fetch("songs/");
-        console.log("not")
+        console.log("not");
         let FolderData = await songsFolder.text();
         let div = document.createElement("div");
         div.innerHTML = FolderData;
