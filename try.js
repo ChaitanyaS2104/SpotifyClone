@@ -16,13 +16,12 @@ async function main() {
     //Display albums on the page
     async function displayAlbums() {
         let songsFolder = await fetch("songs/");
-        console.log("not");
         let FolderData = await songsFolder.text();
         let div = document.createElement("div");
         div.innerHTML = FolderData;
         let folderNames = div.getElementsByTagName('a');
         for (let i = 0; i < folderNames.length; i++) {
-            if (folderNames[i].getAttribute("href").includes("/songs/")) {
+            if (folderNames[i].getAttribute("href").includes("songs/")) {
                 let folder = (folderNames[i].getAttribute("href"));
                 //Get metadata of folder
                 let songsFolder = await fetch(`${folder}/file.json`);
